@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    background: white;
+    text-align: center;
+    padding: 25px 15px 18px;
+    border-bottom: 2px solid #ffe0ee;
+}
+
+.encabezado h1 {
+    color: #f16ba5;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 38px;
+}
+
+.encabezado nav {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+.encabezado nav a {
+    text-decoration: none;
+    color: #444;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.encabezado nav a:hover {
+    color: #f16ba5;
+}
+
+/* PORTADA CON FOTOGRAFIA */
+.portada {
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 240, 249, 0.97) 0%,
+            rgba(255, 240, 249, 0.85) 40%,
+            rgba(255, 240, 249, 0.08) 100%
+        ),
+        url("imagenes/nenufares.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.portada-texto {
+    max-width: 470px;
+}
+
+.etiqueta {
+    color: #e95698;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.portada h2 {
+    font-size: 46px;
+    line-height: 1.2;
+    margin: 12px 0;
+    color: #29232a;
+}
+
+.portada h3 {
+    color: #df5792;
+    margin-bottom: 15px;
+}
+
+.portada-texto p {
+    margin-bottom: 20px;
+}
+
+/* BOTONES */
+.boton {
+    display: inline-block;
+    background: #f16ba5;
+    color: white;
+    padding: 12px 22px;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #d94d89;
+}
+
+/* SECCIONES */
+.contenido {
+    max-width: 1100px;
+    margin: auto;
+    padding: 55px 20px;
+    text-align: center;
+}
+
+.contenido h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.descripcion {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* TARJETAS */
+.rejilla {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+
+.tarjeta {
+    background: white;
+    padding-bottom: 25px;
+    box-shadow: 0 4px 18px #e8cbd866;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tarjeta h3 {
+    margin: 18px 12px 8px;
+    color: #333;
+}
+
+.tarjeta p {
+    padding: 0 20px;
+    margin-bottom: 18px;
+    color: #777;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.tarjeta video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #222;
+}
+
+.imagen-universo {
+    height: 230px;
+    background:
+        linear-gradient(#00000022, #00000022),
+        url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+/* PAGINAS SECUNDARIAS */
+.banner-secundario {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 35px 20px;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #f3a1c5,
+        #b9a0db
+    );
+}
+
+.banner-secundario h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.texto-informativo {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px 22px;
+    text-align: center;
+}
+
+.texto-informativo p {
+    margin: 15px 0;
+}
+
+/* AUDIOS */
+.audio-tarjeta {
+    background: white;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 18px #e8cbd866;
+}
+
+.audio-tarjeta audio {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* PIE DE PAGINA */
+footer {
+    background: #fce4ef;
+    color: #70465a;
+    padding: 22px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* CELULARES */
+@media (max-width: 650px) {
+    .portada {
+        min-height: 420px;
+        padding: 35px 7%;
+        background-position: 60% center;
+    }
+
+    .portada h2 {
+        font-size: 34px;
+    }
+
+    .rejilla {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado nav {
+        gap: 15px;
+    }
+
+    .banner-secundario h2 {
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página | Kathy</title>
+    <link rel="stylesheet" href="k.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h1>Kathy</h1>
+        <p>Mi espacio personal</p>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="naturaleza.html">La naturaleza</a>
+            <a href="universo.html">El universo</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="portada">
+            <div class="portada-texto">
+                <p class="etiqueta">BIENVENIDOS A MI PÁGINA</p>
+                <h2>Hola, soy Kathy</h2>
+                <h3>5to de Programación</h3>
+                <p>
+                    Este es mi espacio personal, donde comparto
+                    mis gustos, videos e información interesante
+                    sobre diferentes temas.
+                </p>
+                <a class="boton" href="#secciones">Conocer más</a>
+            </div>
+        </section>
+
+        <section class="contenido" id="secciones">
+            <h2>Mis videos favoritos</h2>
+            <p class="descripcion">
+                Aquí puedes conocer y disfrutar de dos videos.
+            </p>
+
+            <div class="rejilla videos">
+                <article class="tarjeta">
+                    <video controls>
+                        <source src="videos/video1.mp4"
+                                type="video/mp4">
+                        Tu navegador no puede reproducir este video.
+                    </video>
+                    <h3>Video número uno</h3>
+                    <p>Un video de mi elección.</p>
+                </article>
+
+                <article class="tarjeta">
+                    <video controls>
+                        <source src="videos/video2.mp4"
+                                type="video/mp4">
+                        Tu navegador no puede reproducir este video.
+                    </video>
+                    <h3>Video número dos</h3>
+                    <p>Otro video para compartir.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contenido">
+            <h2>Explora mis páginas</h2>
+            <p class="descripcion">
+                Elige un tema y descubre más información.
+            </p>
+
+            <div class="rejilla">
+                <article class="tarjeta tema">
+                    <img src="imagenes/nenufares.jpg"
+                         alt="Flores acuáticas en un estanque">
+                    <h3>La naturaleza</h3>
+                    <p>
+                        Descubre paisajes, flores, animales
+                        y los sonidos de nuestro planeta.
+                    </p>
+                    <a class="boton"
+                       href="naturaleza.html">Visitar página</a>
+                </article>
+
+                <article class="tarjeta tema">
+                    <div class="imagen-universo"></div>
+                    <h3>El universo</h3>
+                    <p>
+                        Conoce los planetas, las estrellas
+                        y los misterios del espacio.
+                    </p>
+                    <a class="boton"
+                       href="universo.html">Visitar página</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto escolar | Kathy | 5to de Programación</p>
+    </footer>
+
+</body>
+</html>
