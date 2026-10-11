@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f8e8ee">
+
+    <title>Naturaleza de Colima | Flora y Fauna</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="naturaleza.css">
+    <script src="naturaleza.js" defer></script>
+</head>
+
+<body>
+
+<header class="barra" id="inicio">
+    <nav class="navegacion">
+        <a class="logo" href="index.html">Natura<span>·</span>Colima</a>
+
+        <div class="menu">
+            <a href="#explorar">Especies</a>
+            <a href="#ecosistemas">Ecosistemas</a>
+            <a href="#conservar">Conservación</a>
+            <a class="boton boton-verde" href="index.html">⌂ Inicio</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div>
+            <span class="etiqueta">Flora · Fauna · Biodiversidad</span>
+
+            <h1>La naturaleza de <span>Colima</span></h1>
+
+            <p>
+                Descubre la belleza natural de nuestro estado:
+                desde árboles tropicales y aves coloridas hasta
+                la sorprendente vida marina del Pacífico mexicano.
+                Cada especie tiene una historia que merece ser conocida.
+            </p>
+
+            <a class="boton boton-verde" href="#explorar">
+                Explorar especies ↓
+            </a>
+
+            <a class="boton boton-rosa"
+               href="https://www.inaturalist.org/places/colima-mx"
+               target="_blank" rel="noopener">
+                Ver iNaturalist ↗
+            </a>
+        </div>
+
+        <div class="hero-imagen" role="img"
+             aria-label="Paisaje de bosque tropical">
+            <div class="sello">
+                <strong>Una gran riqueza natural</strong>
+                Conoce, observa y ayuda a conservar la biodiversidad.
+            </div>
+        </div>
+    </section>
+
+    <section class="datos">
+        <div class="datos-grid">
+            <div class="dato">
+                <strong>Selvas y bosques</strong>
+                <span>Hábitats de numerosas especies terrestres.</span>
+            </div>
+
+            <div class="dato">
+                <strong>Pacífico mexicano</strong>
+                <span>Costas, playas y organismos marinos.</span>
+            </div>
+
+            <div class="dato">
+                <strong>Revillagigedo</strong>
+                <span>Un archipiélago de gran interés natural.</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion" id="explorar">
+        <div class="encabezado">
+            <span class="etiqueta">KATHY </span>
+            <h2>Pequeñas maravillas de Colima</h2>
+            <p>
+                Explora especies, conoce sus características y escucha
+                grabaciones de sus sonidos.
+            </p>
+        </div>
+
+        <div class="buscador">
+            <input type="search" id="buscar"
+                placeholder="Buscar una especie..."
+                aria-label="Buscar especies">
+        </div>
+
+        <div class="filtros">
+            <button class="filtro activo" data-filtro="todas">Todas</button>
+            <button class="filtro" data-filtro="flora">Flora</button>
+            <button class="filtro" data-filtro="aves">Aves</button>
+            <button class="filtro" data-filtro="fauna">Fauna</button>
+            <button class="filtro" data-filtro="marina">Vida marina</button>
+        </div>
+
+        <div class="tarjetas" id="catalogo">
+
+            <article class="tarjeta" data-categoria="flora">
+                <img
+                    src="imagenes/Árbol_de_Guancaste.jpg"
+                    alt="Vegetación tropical" loading="lazy">
+
+                <div class="tarjeta-contenido">
+                    <span class="categoria">Flora</span>
+                    <h3>La parota</h3>
+                    <p class="cientifico">Enterolobium cyclocarpum</p>
+                    <p class="descripcion">
+                        Árbol tropical de gran tamaño, conocido por su
+                        amplia copa. Proporciona sombra y forma parte
+                        del paisaje de Colima.
+                    </p>
+
+                    <a class="enlace-especie"
+                       href="https://www.inaturalist.org/observations?place_id=colima-mx&taxon_name=Enterolobium%20cyclocarpum"
+                       target="_blank" rel="noopener">
+                        Ver observaciones ↗
+                    </a>
+                </div>
+            </article>
+
+            <article class="tarjeta" data-categoria="flora">
+                <img
+                    src="imagenes/Foto-226.jpg"
+
+                <div class="tarjeta-contenido">
+                    <span class="categoria">Flora</span>
+                    <h3>La rosa morada</h3>
+                    <p class="cientifico">Tabebuia rosea</p>
+                    <p class="descripcion">
+                        Árbol ornamental conocido por sus flores rosadas,
+                        que embellece calles y espacios verdes.
+                    </p>
+
+         
+                    <a class="enlace-especie"
+                       href="https://www.inaturalist.org/observations?place_id=colima-mx&taxon_name=Tabebuia%20rosea"
+                       target="_blank" rel="noopener">
+                        Ver observaciones ↗
+                    </a>
+                </div>
+            </article>
+
+            <article class="tarjeta" data-categoria="fauna">
+                <img
+                    src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=800&q=80"
+                    alt="Hábitat natural" loading="lazy">
+
+                <div class="tarjeta-contenido">
+                    <span class="categoria">Fauna</span>
+                    <h3>La iguana verde</h3>
+                    <p class="cientifico">Iguana iguana</p>
+                    <p class="descripcion">
+                        Reptil de zonas tropicales que puede vivir entre
+                        árboles y cerca del agua. Es importante respetar
+                        su hábitat y no capturar ejemplares silvestres.
+                    </p>
+
+                    <div class="audio">
+                        <strong>♫ Audio de esta especie</strong>
+                        <audio controls preload="none">
+                            <source src="audios/🔉Iguana sound How iguanas talk.mp3" type="audio/mpeg">
+                       
+                        </audio>
+                    </div>
+
+                    <a class="enlace-especie"
+                       href="https://www.inaturalist.org/observations?place_id=colima-mx&taxon_name=Iguana%20iguana"
+                       target="_blank" rel="noopener">
+                        Ver observaciones ↗
+                    </a>
+                </div>
+            </article>
+
+            <article class="tarjeta" data-categoria="aves">
+                <img
+                    src="https://images.unsplash.com/photo-1444464666168-49d633b86797?auto=format&fit=crop&w=800&q=80"
+                    alt="Ave silvestre" loading="lazy">
+
+                <div class="tarjeta-contenido">
+                    <span class="categoria">Aves</span>
+                    <h3>La chachalaca</h3>
+                    <p class="cientifico">Ortalis sp.</p>
+                    <p class="descripcion">
+                        Ave de ambientes tropicales cuyos llamados forman
+                        parte de los sonidos de la naturaleza.
+                    </p>
+
+                    <div class="audio">
+                        <strong>♫ Audio de esta especie</strong>
+                        <audio controls preload="none">
+                            <source src="audios/Sonido chachalaca, manacaraco, huacharaca cantando 🎧.mp3" type="audio/mpeg">
+                          
+                        </audio>
+                    </div>
+
+                    <a class="enlace-especie"
+                       href="https://www.inaturalist.org/observations?place_id=colima-mx&taxon_name=Ortalis"
+                       target="_blank" rel="noopener">
+                        Ver observaciones ↗
+                    </a>
+                </div>
+            </article>
+
+            <article class="tarjeta" data-categoria="marina">
+                <img
+                    src="https://images.unsplash.com/photo-1545670723-196ed0954986?auto=format&fit=crop&w=800&q=80"
+                    alt="Ecosistema marino" loading="lazy">
+
+                <div class="tarjeta-contenido">
+                    <span class="categoria">Vida marina</span>
+                    <h3>Erizo de mar</h3>
+                    <p class="cientifico">Echinometra vanbrunti</p>
+                    <p class="descripcion">
+                        Equinodermo del Pacífico oriental que forma parte
+                        de la diversidad de los ambientes marinos costeros.
+                    </p>
+
+              
+
+                    <a class="enlace-especie"
+                       href="https://www.inaturalist.org/observations?place_id=colima-mx&taxon_name=Echinometra%20vanbrunti"
+                       target="_blank" rel="noopener">
+                        Ver observaciones ↗
+                    </a>
+                </div>
+            </article>
+
+            <article class="tarjeta" data-categoria="flora">
+                <img
+                    src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80"
+                    alt="Vegetación verde" loading="lazy">
+
+                <div class="tarjeta-contenido">
+                    <span class="categoria">Flora</span>
+                    <h3>El guamúchil</h3>
+                    <p class="cientifico">Pithecellobium dulce</p>
+                    <p class="descripcion">
+                        Árbol tropical cuyos frutos son reconocibles y
+                        forman parte de los recursos vegetales de la región.
+                    </p>
+
+                    <div class="audio">
+                        <strong>♫ Audio de esta especie</strong>
+                        <audio controls preload="none">
+                            <source src="audios/guamuchil.mp3" type="audio/mpeg">
+                            Tu navegador no puede reproducir este audio.
+                        </audio>
+                    </div>
+
+                    <a class="enlace-especie"
+                       href="https://www.inaturalist.org/observations?place_id=colima-mx&taxon_name=Pithecellobium%20dulce"
+                       target="_blank" rel="noopener">
+                        Ver observaciones ↗
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="vacio" id="sinResultados">
+            No encontramos especies con ese nombre. Prueba otra búsqueda.
+        </p>
+    </section>
+
+    <section class="ecosistemas" id="ecosistemas">
+        <div class="seccion">
+            <div class="encabezado">
+                <span class="etiqueta">Paisajes vivos</span>
+                <h2>Un estado, muchos ecosistemas</h2>
+                <p>
+                    La variedad de climas y relieves permite la existencia
+                    de ambientes terrestres y marinos.
+                </p>
+            </div>
+
+            <div class="ecosistemas-grid">
+                <article class="eco">
+                    <div class="icono">🌳</div>
+                    <h3>Selvas tropicales</h3>
+                    <p>
+                        Albergan árboles, reptiles, mamíferos, insectos
+                        y plantas adaptadas a las estaciones.
+                    </p>
+                </article>
+
+                <article class="eco">
+                    <div class="icono">🌊</div>
+                    <h3>Costas y manglares</h3>
+                    <p>
+                        Son refugio y zonas de alimentación para peces,
+                        crustáceos y numerosas aves.
+                    </p>
+                </article>
+
+                <article class="eco">
+                    <div class="icono">⛰️</div>
+                    <h3>Montañas y bosques</h3>
+                    <p>
+                        Sus condiciones ambientales favorecen comunidades
+                        vegetales distintas de las zonas costeras.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion" id="conservar">
+        <div class="conservacion">
+            <div>
+                <span class="etiqueta">Pequeñas acciones, gran impacto</span>
+                <h2>Conocer para conservar</h2>
+                <p>
+                    No captures animales silvestres, evita dejar basura
+                    en playas y bosques y respeta las plantas.
+                    Puedes contribuir a la ciencia ciudadana registrando
+                    tus observaciones en iNaturalist.
+                </p>
+            </div>
+
+            <a class="boton boton-verde"
+               href="https://www.inaturalist.org/places/colima-mx"
+               target="_blank" rel="noopener">
+                Descubrir más ↗
+            </a>
+        </div>
+    </section>
+
+    <section class="seccion">
+        <div class="encabezado">
+            <h2>Fuentes para aprender más</h2>
+            <p class="fuentes">
+                <a href="https://www.inaturalist.org/places/colima-mx"
+                   target="_blank" rel="noopener">iNaturalist · Colima</a>
+                &nbsp; · &nbsp;
+                <a href="https://www.biodiversidad.gob.mx/region/eeb/estudios/ee_colima"
+                   target="_blank" rel="noopener">Biodiversidad Mexicana · CONABIO</a>
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <h2>Natura·Colima</h2>
+    <p>Un espacio para descubrir, valorar y proteger nuestra naturaleza.</p>
+    <p>Proyecto educativo sobre la biodiversidad de Colima, México.</p>
+    <a class="volver" href="index.html">← Regresar al inicio</a>
+    <p>© 2026 · Natura·Colima</p>
+</footer>
+
+</body>
+</html>

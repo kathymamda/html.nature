@@ -59,11 +59,11 @@ body {
     background:
         linear-gradient(
             90deg,
-            rgba(255, 240, 249, 0.97) 0%,
+            rgba(208, 198, 204, 0.97) 0%,
             rgba(255, 240, 249, 0.85) 40%,
             rgba(255, 240, 249, 0.08) 100%
         ),
-        url("imagenes/nenufares.jpg");
+        url("nenufares.jpg");
 
     background-size: cover;
     background-position: center;
