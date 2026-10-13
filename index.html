@@ -3,101 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página | Kathy</title>
+
+    <meta name="description" content="Soy Kathy, estudiante de 5to de Programación. Este es mi espacio personal para compartir mis hobbies y descubrir la belleza de la naturaleza y el universo.">
+
+    <title>Kathy | Mi espacio personal</title>
+
     <link rel="stylesheet" href="k.css">
 </head>
 <body>
 
     <header class="encabezado">
-        <h1>Kathy</h1>
+        <h1>Kathy<span>.</span></h1>
         <p>Mi espacio personal</p>
 
-        <nav>
-            <a href="index.html">Inicio</a>
+        <nav aria-label="Navegación principal">
+            <a href="index.html" aria-current="page">Inicio</a>
             <a href="naturaleza.html">La naturaleza</a>
             <a href="universo.html">El universo</a>
         </nav>
     </header>
 
     <main>
+
         <section class="portada">
             <div class="portada-texto">
-                <p class="etiqueta">BIENVENIDOS A MI PÁGINA</p>
-                <h2>Hola, soy Kathy</h2>
-                <h3>5to de Programación</h3>
-                <p>
-                    Este es mi espacio personal, donde comparto
-                    mis gustos, videos e información interesante
-                    sobre diferentes temas.
+
+                <p class="etiqueta">
+                    BIENVENIDOS A MI PEQUEÑO MUNDO
                 </p>
-                <a class="boton" href="#secciones">Conocer más</a>
+
+                <h2>Hola, soy Kathy <span>♡</span></h2>
+
+                <h3>Estudiante de 5to de Programación</h3>
+
+                <p>
+                    Soy una persona con ganas de aprender,
+                    descubrir cosas nuevas y disfrutar de mis
+                    hobbies. En este espacio comparto un poquito
+                    de mis gustos y mi curiosidad por el mundo
+                    que nos rodea.
+                </p>
+
+                <a class="boton" href="#secciones">
+                    Descubre mi mundo →
+                </a>
+
             </div>
         </section>
 
         <section class="contenido" id="secciones">
-            <h2>Mis hobbies favoritos</h2>
+
+            <h2>Un poquito de mí</h2>
+
             <p class="descripcion">
-                Aquí puedes conocer y disfrutar de dos videos..
+                Estas son algunas de las cosas que disfruto
+                en mi tiempo libre.
             </p>
 
             <div class="rejilla videos">
+
                 <article class="tarjeta">
-                    <video controls>
+                    <video controls preload="metadata">
                         <source src="videos/NS.mp4"
                                 type="video/mp4">
                         Tu navegador no puede reproducir este video.
                     </video>
-                    <h3>IR AL GYM</h3>
-                    <p>No subio.</p>
+
+                    <div class="tarjeta-texto">
+                        <p class="categoria">MI HOBBY</p>
+                        <h3>Ir al gym</h3>
+                        <p>
+                            Un espacio para mantenerme activa,
+                            superarme y sentirme bien.
+                        </p>
+                    </div>
                 </article>
 
                 <article class="tarjeta">
-                    <video controls>
+                    <video controls preload="metadata">
                         <source src="videos/gym.mp4"
                                 type="video/mp4">
                         Tu navegador no puede reproducir este video.
                     </video>
-                    <h3>PROYECTARSE ALCH</h3>
-                    <p>OH SI.</p>
+
+                    <div class="tarjeta-texto">
+                        <p class="categoria">TIEMPO PARA MÍ</p>
+                        <h3>Ver películas</h3>
+                        <p>
+                            Disfrutar de buenas historias
+                            y desconectarme un rato.
+                        </p>
+                    </div>
                 </article>
+
             </div>
         </section>
 
         <section class="contenido">
+
             <h2>Explora mis páginas</h2>
+
             <p class="descripcion">
-                Elige un tema y descubre más información.
+                Dos temas fascinantes que quiero compartir contigo.
             </p>
 
             <div class="rejilla">
+
                 <article class="tarjeta tema">
-                    <img src="nenufares.jpg"
-                        alt="Flores acuáticas en un estanque">
-                    <h3>La naturaleza</h3>
-                    <p>
-                        Descubre paisajes, flores, animales
-                        y los sonidos de nuestro planeta.
-                    </p>
-                    <a class="boton"
-                    href="naturaleza.html">Visitar página</a>
+                    <img
+                        src="nenufares.jpg"
+                        alt="Nenúfares y flores sobre un estanque"
+                        loading="lazy"
+                    >
+
+                    <div class="tarjeta-texto">
+                        <p class="categoria">NATURALEZA</p>
+                        <h3>La naturaleza</h3>
+
+                        <p>
+                            Descubre paisajes, flores, animales
+                            y la belleza de nuestro planeta.
+                        </p>
+
+                        <a class="boton"
+                           href="naturaleza.html">
+                            Explorar naturaleza →
+                        </a>
+                    </div>
                 </article>
 
                 <article class="tarjeta tema">
-                    <div class="imagen-universo"></div>
-                    <h3>El universo</h3>
-                    <p>
-                        Conoce los planetas, las estrellas
-                        y los misterios del espacio.
-                    </p>
-                    <a class="boton"
-                    href="universo.html">Visitar página</a>
+                    <div
+                        class="imagen-universo"
+                        role="img"
+                        aria-label="Imagen del universo y las nebulosas"
+                    ></div>
+
+                    <div class="tarjeta-texto">
+                        <p class="categoria">ASTRONOMÍA</p>
+                        <h3>El universo</h3>
+
+                        <p>
+                            Viaja entre planetas, estrellas
+                            y los misterios del espacio.
+                        </p>
+
+                        <a class="boton"
+                           href="universo.html">
+                            Explorar el universo →
+                        </a>
+                    </div>
                 </article>
+
             </div>
         </section>
+
+        <section class="mensaje-final">
+            <p class="etiqueta">GRACIAS POR VISITARME</p>
+            <h2>Cada día es una oportunidad para descubrir algo nuevo.</h2>
+            <p>Este es mi mundo, una pequeña parte de lo que soy. ♡</p>
+        </section>
+
     </main>
 
     <footer>
-        <p>Proyecto escolar | Kathy | 5to de Programación</p>
+        <p>Kathy · 5to de Programación</p>
+        <p>Hecho con cariño ♡</p>
     </footer>
 
 </body>
