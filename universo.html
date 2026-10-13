@@ -4,96 +4,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmos Pink | Explorando el Universo</title>
 
-    <!-- Archivo de estilos -->
+    <title>Universo Rosa | Explorando el Cosmos</title>
+
     <link rel="stylesheet" href="universo.css">
 
-    <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- ENCABEZADO -->
-    <header class="encabezado">
+    <header class="encabezado" id="inicio">
+
         <a href="#inicio" class="logo">
-            <span class="logo-icono">✦</span>
-            COSMOS <span>PINK</span>
+            <span>✦</span> UNIVERSO ROSA
         </a>
 
-        <nav class="navegacion">
+        <nav class="menu">
             <a href="#inicio">Inicio</a>
             <a href="#explora">Explora</a>
             <a href="#misiones">Misiones</a>
             <a href="#noticias">Noticias</a>
         </nav>
 
-        <a class="boton-menu" href="https://www.nasa.gov/es/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.nasa.gov/es/"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="boton boton-menu">
             NASA oficial ↗
         </a>
+
     </header>
 
 
     <main>
 
         <!-- PORTADA -->
-        <section class="hero" id="inicio">
+        <section class="portada">
 
-            <div class="hero-contenido">
-                <span class="etiqueta">
-                    ✧ UN UNIVERSO DE POSIBILIDADES
-                </span>
+            <div class="portada-texto">
+
+                <span class="etiqueta">✧ UN UNIVERSO POR DESCUBRIR ✧</span>
 
                 <h1>
                     El universo es
-                    <span>más mágico</span>
-                    de lo que imaginas.
+                    <span>un sueño infinito.</span>
                 </h1>
 
                 <p>
-                    Viaja entre estrellas, descubre planetas y conoce
-                    los secretos del cosmos en un espacio creado para
-                    las mentes curiosas.
+                    Desde nuestro planeta azul hasta las galaxias más lejanas,
+                    descubre los misterios del espacio y déjate sorprender
+                    por la inmensidad del cosmos.
                 </p>
 
-                <div class="hero-botones">
-                    <a href="#explora" class="boton-principal">
-                        Explorar el universo ✦
+                <div class="botones">
+                    <a href="#explora" class="boton boton-rosa">
+                        Explorar el cosmos ✦
                     </a>
 
                     <a href="https://www.nasa.gov/es/"
                        target="_blank"
                        rel="noopener noreferrer"
-                       class="boton-secundario">
+                       class="boton boton-blanco">
                         Visitar NASA ↗
                     </a>
                 </div>
 
-                <div class="hero-dato">
-                    <span class="dato-estrella">✧</span>
-                    <div>
-                        <strong>Infinitas posibilidades</strong>
-                        <p>Una pequeña ventana al espacio exterior.</p>
-                    </div>
+                <div class="frase">
+                    <span>✧</span>
+                    <p>El cielo no es el límite, sino el comienzo.</p>
                 </div>
+
             </div>
 
-            <div class="hero-imagen">
-                <div class="orbita orbita-uno"></div>
-                <div class="orbita orbita-dos"></div>
+            <div class="portada-visual">
+
+                <div class="circulo-fondo"></div>
 
                 <img
-                    src="https://images-assets.nasa.gov/image/PIA18033/PIA18033~orig.jpg"
+                    class="tierra"
+                    src="https://images-assets.nasa.gov/image/PIA18033/PIA18033~medium.jpg"
                     alt="El planeta Tierra visto desde el espacio"
-                    class="imagen-tierra"
                 >
 
-                <span class="estrella estrella-uno">✦</span>
-                <span class="estrella estrella-dos">✧</span>
-                <span class="estrella estrella-tres">✦</span>
+                <span class="estrella estrella1">✦</span>
+                <span class="estrella estrella2">✧</span>
+                <span class="estrella estrella3">✧</span>
+                <span class="estrella estrella4">✦</span>
 
                 <div class="tarjeta-flotante">
                     <span>🌎</span>
@@ -102,137 +103,155 @@
                         <p>El planeta Tierra</p>
                     </div>
                 </div>
+
             </div>
 
         </section>
 
 
         <!-- CINTA DECORATIVA -->
-        <div class="cinta">
-            <span>✦ EXPLORA</span>
-            <span>✧ DESCUBRE</span>
-            <span>✦ SUEÑA</span>
-            <span>✧ IMAGINA</span>
-            <span>✦ EXPLORA</span>
-        </div>
+        <section class="cinta">
+            <span>✦ EXPLORAR</span>
+            <span>✧ DESCUBRIR</span>
+            <span>✦ IMAGINAR</span>
+            <span>✧ APRENDER</span>
+        </section>
 
 
-        <!-- SECCIÓN DE EXPLORACIÓN -->
+        <!-- EXPLORA -->
         <section class="seccion" id="explora">
 
-            <div class="seccion-titulo">
-                <span class="subtitulo">TU PRÓXIMA AVENTURA</span>
+            <div class="titulo-seccion">
+                <span class="subtitulo">PEQUEÑAS MARAVILLAS DEL COSMOS</span>
 
-                <h2>Descubre lo extraordinario</h2>
+                <h2>¿Qué quieres descubrir?</h2>
 
                 <p>
-                    Cada rincón del universo esconde una historia
-                    esperando a ser descubierta.
+                    Conoce algunos de los lugares más fascinantes
+                    que estudian los científicos.
                 </p>
             </div>
 
-            <div class="tarjetas">
+            <div class="contenedor-tarjetas">
 
+                <!-- TIERRA -->
                 <article class="tarjeta">
                     <img
                         src="https://images-assets.nasa.gov/image/PIA18033/PIA18033~medium.jpg"
-                        alt="Vista de la Tierra"
+                        alt="La Tierra"
                         loading="lazy"
                     >
 
                     <div class="tarjeta-contenido">
-                        <span class="categoria">01 · NUESTRO HOGAR</span>
-                        <h3>El planeta azul</h3>
+                        <span class="numero">01 · NUESTRO HOGAR</span>
+
+                        <h3>La Tierra</h3>
+
                         <p>
-                            Conoce nuestro planeta, sus océanos,
-                            su atmósfera y los misterios que aún guarda.
+                            Nuestro planeta es un mundo lleno de vida,
+                            océanos, nubes y fenómenos extraordinarios.
                         </p>
 
-                        <a href="https://ciencia.nasa.gov/ciencias-terrestres/la-tierra/"
-                           target="_blank" rel="noopener noreferrer">
+                        <a class="boton boton-tarjeta"
+                           href="https://ciencia.nasa.gov/ciencias-terrestres/la-tierra/"
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Descubrir la Tierra ↗
                         </a>
                     </div>
                 </article>
 
 
+                <!-- MARTE -->
                 <article class="tarjeta">
                     <img
                         src="https://images-assets.nasa.gov/image/PIA00407/PIA00407~medium.jpg"
-                        alt="El planeta Marte"
+                        alt="Marte, el planeta rojo"
                         loading="lazy"
                     >
 
                     <div class="tarjeta-contenido">
-                        <span class="categoria">02 · OTROS MUNDOS</span>
-                        <h3>El enigmático Marte</h3>
+                        <span class="numero">02 · OTROS MUNDOS</span>
+
+                        <h3>El planeta rojo</h3>
+
                         <p>
-                            Explora el planeta rojo y descubre
-                            por qué despierta tanta curiosidad.
+                            Marte guarda pistas sobre su pasado
+                            y es uno de los destinos de la exploración espacial.
                         </p>
 
-                        <a href="https://science.nasa.gov/mars/"
-                           target="_blank" rel="noopener noreferrer">
-                            Viajar a Marte ↗
+                        <a class="boton boton-tarjeta"
+                           href="https://science.nasa.gov/mars/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Explorar Marte ↗
                         </a>
                     </div>
                 </article>
 
 
+                <!-- UNIVERSO -->
                 <article class="tarjeta">
                     <img
                         src="https://images-assets.nasa.gov/image/PIA03149/PIA03149~medium.jpg"
-                        alt="Galaxias lejanas en el universo"
+                        alt="Galaxias en el universo"
                         loading="lazy"
                     >
 
                     <div class="tarjeta-contenido">
-                        <span class="categoria">03 · MÁS ALLÁ</span>
-                        <h3>Galaxias lejanas</h3>
+                        <span class="numero">03 · MÁS ALLÁ</span>
+
+                        <h3>Las galaxias</h3>
+
                         <p>
-                            Mira hacia las profundidades del universo
-                            y maravíllate con sus estructuras.
+                            Enormes conjuntos de estrellas, gas y polvo
+                            que nos ayudan a comprender el universo.
                         </p>
 
-                        <a href="https://science.nasa.gov/universe/"
-                           target="_blank" rel="noopener noreferrer">
-                            Mirar las estrellas ↗
+                        <a class="boton boton-tarjeta"
+                           href="https://science.nasa.gov/universe/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Ver el universo ↗
                         </a>
                     </div>
                 </article>
 
             </div>
+
         </section>
 
 
-        <!-- MISIÓN DESTACADA -->
+        <!-- MISIÓN ESPACIAL -->
         <section class="mision" id="misiones">
 
             <div class="mision-imagen">
                 <img
                     src="https://images-assets.nasa.gov/image/iss070e000581/iss070e000581~medium.jpg"
-                    alt="La Tierra observada desde la Estación Espacial Internacional"
+                    alt="Vista de la Tierra desde el espacio"
                     loading="lazy"
                 >
             </div>
 
-            <div class="mision-contenido">
-                <span class="subtitulo">MÁS ALLÁ DE NUESTRO PLANETA</span>
+            <div class="mision-texto">
 
-                <h2>El futuro también está entre las estrellas.</h2>
+                <span class="subtitulo">MÁS ALLÁ DE LAS ESTRELLAS</span>
+
+                <h2>La próxima gran aventura comienza aquí.</h2>
 
                 <p>
-                    Desde la exploración lunar hasta el estudio de
-                    mundos lejanos, las misiones espaciales nos ayudan
-                    a comprender nuestro lugar en el universo.
+                    Las misiones espaciales nos permiten estudiar la Luna,
+                    investigar Marte y descubrir nuevos secretos sobre
+                    nuestro sistema solar.
                 </p>
 
                 <a href="https://www.nasa.gov/es/missions/"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="boton-principal">
+                   class="boton boton-rosa">
                     Conocer las misiones ↗
                 </a>
+
             </div>
 
         </section>
@@ -241,33 +260,67 @@
         <!-- NOTICIAS -->
         <section class="seccion noticias" id="noticias">
 
-            <div class="seccion-titulo">
-                <span class="subtitulo">EL COSMOS NO SE DETIENE</span>
-                <h2>Ventana al universo</h2>
+            <div class="titulo-seccion">
+                <span class="subtitulo">EL ESPACIO ESTÁ EN CONSTANTE CAMBIO</span>
+
+                <h2>Noticias del universo</h2>
+
                 <p>
-                    Mantente al día con nuevos descubrimientos,
-                    investigaciones y aventuras espaciales.
+                    Consulta información, descubrimientos y novedades
+                    directamente desde las plataformas oficiales de la NASA.
                 </p>
             </div>
 
-            <div class="noticia-destacada">
+            <div class="noticia">
+
                 <div class="noticia-icono">🚀</div>
 
                 <div class="noticia-texto">
-                    <span class="categoria">ACTUALIDAD ESPACIAL</span>
-                    <h3>Las próximas páginas de la exploración espacial</h3>
+                    <span class="numero">ACTUALIDAD ESPACIAL</span>
+
+                    <h3>El universo nunca deja de sorprendernos.</h3>
+
                     <p>
-                        Descubre las novedades y los proyectos que
-                        están ampliando nuestros conocimientos.
+                        Explora las últimas publicaciones y conoce
+                        las investigaciones de la NASA.
                     </p>
                 </div>
 
                 <a href="https://www.nasa.gov/es/news/"
                    target="_blank"
                    rel="noopener noreferrer"
-                   class="boton-noticia">
+                   class="boton boton-rosa">
                     Leer noticias ↗
                 </a>
+
+            </div>
+
+            <div class="enlaces-oficiales">
+
+                <a href="https://images.nasa.gov/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span>✧</span>
+                    <strong>Galería de imágenes</strong>
+                    <small>Fotografías del espacio</small>
+                </a>
+
+                <a href="https://science.nasa.gov/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span>✧</span>
+                    <strong>Ciencia NASA</strong>
+                    <small>Descubrimientos científicos</small>
+                </a>
+
+                <a href="https://www.nasa.gov/es/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span>✧</span>
+                    <strong>NASA en español</strong>
+                    <small>Portal oficial</small>
+                </a>
+
             </div>
 
         </section>
@@ -276,25 +329,24 @@
 
 
     <!-- PIE DE PÁGINA -->
-    <footer class="footer">
+    <footer class="pie">
+
         <a href="#inicio" class="logo">
-            <span class="logo-icono">✦</span>
-            COSMOS <span>PINK</span>
+            <span>✦</span> UNIVERSO ROSA
         </a>
 
-        <p>
-            Diseñado con curiosidad y amor por el universo. ✧
-        </p>
+        <p>Hecho con curiosidad, creatividad y amor por el cosmos. ✧</p>
 
         <a href="https://www.nasa.gov/es/"
            target="_blank"
            rel="noopener noreferrer">
-            Explora NASA en español ↗
+            Explora el sitio oficial de la NASA ↗
         </a>
 
-        <span class="copyright">
+        <small>
             Proyecto educativo independiente · 2026
-        </span>
+        </small>
+
     </footer>
 
 </body>
