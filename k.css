@@ -6,62 +6,101 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 20px;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     background: #fff9fc;
-    color: #333;
-    line-height: 1.6;
+    color: #40323b;
+    line-height: 1.7;
+    overflow-wrap: break-word;
 }
 
-/* ENCABEZADO */
+img,
+video {
+    max-width: 100%;
+}
+
+/* ========================================
+   ENCABEZADO Y NAVEGACIÓN
+======================================== */
+
 .encabezado {
-    background: white;
+    background: rgba(255, 255, 255, 0.97);
     text-align: center;
-    padding: 25px 15px 18px;
-    border-bottom: 2px solid #ffe0ee;
+    padding: 24px 20px 20px;
+    border-bottom: 1px solid #f5dce8;
+    box-shadow: 0 4px 20px rgba(112, 61, 87, 0.04);
 }
 
 .encabezado h1 {
-    color: #f16ba5;
+    color: #d96699;
     font-family: Georgia, serif;
     font-style: italic;
-    font-size: 38px;
+    font-size: clamp(34px, 5vw, 43px);
+    line-height: 1.3;
+    letter-spacing: 1px;
+}
+
+.encabezado h1 span {
+    color: #efb2cd;
+}
+
+.encabezado > p {
+    color: #8d7582;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin-top: 2px;
 }
 
 .encabezado nav {
-    margin-top: 18px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 28px;
+    gap: 12px;
 }
 
 .encabezado nav a {
     text-decoration: none;
-    color: #444;
-    font-size: 13px;
-    font-weight: bold;
+    color: #66535e;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 17px;
+    border-radius: 30px;
+    transition: background 0.25s ease,
+                color 0.25s ease,
+                transform 0.25s ease;
+}
+
+.encabezado nav a:hover,
+.encabezado nav a[aria-current="page"] {
+    background: #fbe5ef;
+    color: #bd4e81;
 }
 
 .encabezado nav a:hover {
-    color: #f16ba5;
+    transform: translateY(-2px);
 }
 
-/* PORTADA CON FOTOGRAFIA */
+/* ========================================
+   PORTADA PRINCIPAL
+======================================== */
+
 .portada {
-    min-height: 470px;
+    min-height: 490px;
     display: flex;
     align-items: center;
-    padding: 50px 8%;
-
+    padding: 65px 9%;
+    position: relative;
     background:
         linear-gradient(
             90deg,
-            rgba(208, 198, 204, 0.97) 0%,
-            rgba(255, 240, 249, 0.85) 40%,
-            rgba(255, 240, 249, 0.08) 100%
+            rgba(255, 247, 251, 0.98) 0%,
+            rgba(255, 242, 248, 0.92) 43%,
+            rgba(255, 242, 248, 0.25) 100%
         ),
         url("nenufares.jpg");
 
@@ -70,193 +109,483 @@ body {
 }
 
 .portada-texto {
-    max-width: 470px;
+    max-width: 520px;
 }
 
 .etiqueta {
-    color: #e95698;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
+    color: #c45488;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 12px;
 }
 
 .portada h2 {
-    font-size: 46px;
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 5vw, 54px);
     line-height: 1.2;
-    margin: 12px 0;
-    color: #29232a;
+    margin: 10px 0 16px;
+    color: #40303b;
+    letter-spacing: -1px;
+}
+
+.portada h2 span {
+    color: #dc7ca5;
 }
 
 .portada h3 {
-    color: #df5792;
-    margin-bottom: 15px;
+    color: #b94f80;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 16px;
 }
 
-.portada-texto p {
-    margin-bottom: 20px;
+.portada-texto > p:not(.etiqueta) {
+    max-width: 460px;
+    color: #66545f;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 26px;
 }
 
-/* BOTONES */
+/* ========================================
+   BOTONES
+======================================== */
+
 .boton {
-    display: inline-block;
-    background: #f16ba5;
-    color: white;
-    padding: 12px 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #e889b2, #d76c9d);
+    color: #fff;
+    padding: 12px 23px;
     text-decoration: none;
-    border: none;
-    border-radius: 3px;
+    border: 1px solid transparent;
+    border-radius: 30px;
     font-size: 13px;
-    font-weight: bold;
+    font-weight: 700;
     cursor: pointer;
+    box-shadow: 0 6px 16px rgba(207, 94, 146, 0.19);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
 }
 
 .boton:hover {
-    background: #d94d89;
+    background: linear-gradient(135deg, #d86e9d, #c65388);
+    transform: translateY(-3px);
+    box-shadow: 0 9px 22px rgba(207, 94, 146, 0.28);
 }
 
-/* SECCIONES */
+.boton:focus-visible,
+.encabezado nav a:focus-visible {
+    outline: 3px solid #c45488;
+    outline-offset: 4px;
+}
+
+/* ========================================
+   SECCIONES
+======================================== */
+
 .contenido {
-    max-width: 1100px;
-    margin: auto;
-    padding: 55px 20px;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 72px 24px;
     text-align: center;
 }
 
 .contenido h2 {
-    font-size: 28px;
-    margin-bottom: 8px;
+    font-family: Georgia, serif;
+    color: #44333e;
+    font-size: clamp(27px, 4vw, 34px);
+    line-height: 1.3;
+    margin-bottom: 12px;
 }
 
 .descripcion {
-    color: #777;
-    margin-bottom: 30px;
+    max-width: 600px;
+    margin: 0 auto 38px;
+    color: #897783;
+    font-size: 15px;
 }
 
-/* TARJETAS */
+/* ========================================
+   REJILLA Y TARJETAS
+======================================== */
+
 .rejilla {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
+    gap: 28px;
     text-align: center;
+    align-items: stretch;
 }
 
 .tarjeta {
-    background: white;
-    padding-bottom: 25px;
-    box-shadow: 0 4px 18px #e8cbd866;
-    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: #fff;
+    border: 1px solid #f5e5ed;
+    padding-bottom: 26px;
+    box-shadow: 0 8px 28px rgba(107, 63, 85, 0.07);
+    border-radius: 16px;
     overflow: hidden;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 36px rgba(107, 63, 85, 0.12);
+    border-color: #efc8db;
 }
 
 .tarjeta h3 {
-    margin: 18px 12px 8px;
-    color: #333;
+    color: #473540;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 21px;
+    line-height: 1.4;
+    margin: 8px 18px 10px;
 }
 
 .tarjeta p {
-    padding: 0 20px;
-    margin-bottom: 18px;
-    color: #777;
+    color: #82717c;
+    font-size: 14px;
+    line-height: 1.8;
+    padding: 0 22px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    padding-top: 18px;
+}
+
+.tarjeta-texto .categoria {
+    color: #c76b96;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 3px;
+}
+
+.tarjeta-texto .boton {
+    margin-top: auto;
 }
 
 .tarjeta img {
+    display: block;
     width: 100%;
-    height: 230px;
+    height: 245px;
     object-fit: cover;
+    transition: transform 0.45s ease;
+}
+
+.tarjeta.tema img:hover {
+    transform: scale(1.025);
 }
 
 .tarjeta video {
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: #222;
+    object-fit: contain;
+    background: #201d20;
 }
+
+.tarjeta video:focus-visible {
+    outline: 3px solid #d76c9d;
+    outline-offset: -3px;
+}
+
+/* IMAGEN DEL UNIVERSO */
 
 .imagen-universo {
-    height: 230px;
+    width: 100%;
+    height: 245px;
     background:
-        linear-gradient(#00000022, #00000022),
+        linear-gradient(
+            rgba(18, 12, 39, 0.05),
+            rgba(18, 12, 39, 0.12)
+        ),
         url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=900&q=80");
+
     background-size: cover;
     background-position: center;
+    transition: filter 0.3s ease;
 }
 
-/* PAGINAS SECUNDARIAS */
+.tarjeta:hover .imagen-universo {
+    filter: brightness(1.08);
+}
+
+/* ========================================
+   MENSAJE FINAL DE LA PÁGINA
+======================================== */
+
+.mensaje-final {
+    margin: 5px auto 65px;
+    max-width: 1000px;
+    padding: 48px 28px;
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        #fff0f6,
+        #fce6f0 55%,
+        #f7eafa
+    );
+    border: 1px solid #f5dce8;
+    border-radius: 20px;
+}
+
+.mensaje-final .etiqueta {
+    margin-bottom: 12px;
+}
+
+.mensaje-final h2 {
+    max-width: 700px;
+    margin: 0 auto 14px;
+    color: #493442;
+    font-family: Georgia, serif;
+    font-size: clamp(25px, 4vw, 34px);
+    line-height: 1.4;
+}
+
+.mensaje-final > p:last-child {
+    color: #806878;
+    font-size: 14px;
+}
+
+/* ========================================
+   PÁGINAS SECUNDARIAS
+   Naturaleza y universo
+======================================== */
+
 .banner-secundario {
-    min-height: 300px;
+    min-height: 320px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 35px 20px;
+    padding: 45px 24px;
     color: white;
     background: linear-gradient(
         135deg,
-        #f3a1c5,
-        #b9a0db
+        #e99abb,
+        #c3a8df
     );
 }
 
 .banner-secundario h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 5vw, 44px);
+    line-height: 1.3;
+    margin-bottom: 12px;
 }
 
 .texto-informativo {
     max-width: 850px;
-    margin: auto;
-    padding: 35px 22px;
+    margin: 0 auto;
+    padding: 42px 24px;
     text-align: center;
 }
 
 .texto-informativo p {
+    color: #6f5b68;
     margin: 15px 0;
 }
 
-/* AUDIOS */
+/* ========================================
+   TARJETAS DE AUDIO
+======================================== */
+
 .audio-tarjeta {
-    background: white;
-    padding: 25px;
-    border-radius: 6px;
-    box-shadow: 0 4px 18px #e8cbd866;
+    background: #fff;
+    padding: 28px;
+    border: 1px solid #f5e5ed;
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(107, 63, 85, 0.07);
 }
 
 .audio-tarjeta audio {
+    display: block;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 16px;
 }
 
-/* PIE DE PAGINA */
+/* ========================================
+   PIE DE PÁGINA
+======================================== */
+
 footer {
-    background: #fce4ef;
-    color: #70465a;
-    padding: 22px;
+    background: #f9e7ef;
+    color: #78566a;
+    padding: 26px 20px;
     text-align: center;
     margin-top: 25px;
+    border-top: 1px solid #f2d6e4;
 }
 
-/* CELULARES */
-@media (max-width: 650px) {
+footer p {
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* ========================================
+   TABLETAS
+======================================== */
+
+@media (max-width: 800px) {
     .portada {
-        min-height: 420px;
-        padding: 35px 7%;
-        background-position: 60% center;
+        padding: 55px 7%;
+        background-position: 58% center;
     }
 
-    .portada h2 {
-        font-size: 34px;
+    .contenido {
+        padding: 58px 22px;
     }
 
     .rejilla {
-        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tarjeta h3 {
+        font-size: 19px;
+    }
+
+    .tarjeta img,
+    .imagen-universo {
+        height: 210px;
+    }
+
+    .mensaje-final {
+        margin: 5px 22px 45px;
+    }
+}
+
+/* ========================================
+   CELULARES
+======================================== */
+
+@media (max-width: 600px) {
+    .encabezado {
+        padding: 20px 12px 16px;
     }
 
     .encabezado nav {
-        gap: 15px;
+        gap: 5px;
+        margin-top: 16px;
     }
 
-    .banner-secundario h2 {
-        font-size: 32px;
+    .encabezado nav a {
+        font-size: 12px;
+        padding: 9px 11px;
+    }
+
+    .portada {
+        min-height: 440px;
+        padding: 45px 7%;
+        background:
+            linear-gradient(
+                90deg,
+                rgba(255, 247, 251, 0.96),
+                rgba(255, 242, 248, 0.78)
+            ),
+            url("nenufares.jpg");
+
+        background-size: cover;
+        background-position: center;
+    }
+
+    .portada h2 {
+        font-size: 36px;
+    }
+
+    .portada h3 {
+        font-size: 16px;
+    }
+
+    .portada-texto > p:not(.etiqueta) {
+        font-size: 14px;
+    }
+
+    .contenido {
+        padding: 48px 18px;
+    }
+
+    .contenido h2 {
+        font-size: 28px;
+    }
+
+    .descripcion {
+        font-size: 14px;
+        margin-bottom: 28px;
+    }
+
+    .rejilla {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .tarjeta img,
+    .imagen-universo {
+        height: 230px;
+    }
+
+    .tarjeta {
+        border-radius: 14px;
+    }
+
+    .tarjeta-texto {
+        padding: 18px 0 0;
+    }
+
+    .mensaje-final {
+        margin: 0 18px 40px;
+        padding: 36px 20px;
+    }
+
+    .mensaje-final h2 {
+        font-size: 26px;
+    }
+
+    .banner-secundario {
+        min-height: 270px;
+        padding: 35px 18px;
+    }
+
+    .texto-informativo {
+        padding: 30px 20px;
+    }
+
+    .audio-tarjeta {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 22px 15px;
+    }
+}
+
+/* RESPETO A LAS PREFERENCIAS DE MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }
